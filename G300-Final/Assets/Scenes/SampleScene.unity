@@ -270,13 +270,14 @@ GameObject:
   - component: {fileID: 434039536}
   - component: {fileID: 434039539}
   - component: {fileID: 434039538}
+  - component: {fileID: 434039540}
   m_Layer: 5
   m_Name: dialogMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &434039535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -369,6 +370,22 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 5940771}
+--- !u!114 &434039540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434039534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e957d58a4584a8894329531ec0b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSONAsset: {fileID: 4900000, guid: b8f6f9cc8d887f24694830e9c781b4e1, type: 3}
+  canvas: {fileID: 1031878874}
+  textPrefab: {fileID: 11456674, guid: 1aab6ef84d87c416f8f0b3e1ef3d77d2, type: 3}
+  buttonPrefab: {fileID: 1893334661}
 --- !u!43 &440124744
 Mesh:
   m_ObjectHideFlags: 0
