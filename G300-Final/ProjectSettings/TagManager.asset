@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - talk
+  - player
   layers:
   - Default
   - TransparentFX
