@@ -1735,6 +1735,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 434039534}
   dialogueText: {fileID: 5940773}
+  choices:
+  - {fileID: 1558336384}
+  - {fileID: 1714558813}
 --- !u!4 &1188920229
 Transform:
   m_ObjectHideFlags: 0
@@ -2086,7 +2089,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1558336387}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1188920228}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: MakeChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1558336387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,7 +2356,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1714558816}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1188920228}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: MakeChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1714558816
 MonoBehaviour:
   m_ObjectHideFlags: 0
