@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
-
+    private const string Message = "win";
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Found more than one Input Manager in the scene.");
+            Debug.LogError("more than one Manager in scene.");
         }
         instance = this;
     }
@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
     }
     private IEnumerator ExitDialogueMode()
     {
-        yield return new WaitForSeconds(0.2f);
+         yield return new WaitForSeconds(0.2f);
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -73,6 +73,12 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
+            Debug.Log(dialogueText.text);
+            if (dialogueText.text == "i really shouldn't, but i'll let you through.")
+            {
+                Debug.Log(dialogueText.text);
+            }
+
         }
         else
         {
@@ -92,22 +98,22 @@ public class DialogueManager : MonoBehaviour
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        // defensive check to make sure our UI can support the number of choices coming in
+
         if (currentChoices.Count > choices.Length)
         {
-            Debug.LogError("More choices were given than the UI can support. Number of choices given: "
+            Debug.LogError("More choices than the UI can support. Number of choices given: "
                 + currentChoices.Count);
         }
 
         int index = 0;
-        // enable and initialize the choices up to the amount of choices for this line of dialogue
+
         foreach (Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
         }
-        // go through the remaining choices the UI supports and make sure they're hidden
+
         for (int i = index; i < choices.Length; i++)
         {
             choices[i].gameObject.SetActive(false);
