@@ -73,8 +73,8 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
-            Debug.Log(dialogueText.text);
-            if (dialogueText.text == "i really shouldn't, but i'll let you through.")
+
+            if (dialogueText.text == "i really shouldn't, but i'll let you through.\n")
             {
                 Debug.Log(dialogueText.text);
             }
