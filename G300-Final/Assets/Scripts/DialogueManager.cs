@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class DialogueManager : MonoBehaviour
 {
     private const string Message = "win";
+
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -21,6 +22,8 @@ public class DialogueManager : MonoBehaviour
     private static DialogueManager instance;
 
     public bool dialogueIsPlaying { get; private set; }
+
+    [SerializeField] private GameObject door;
 
     private void Awake()
     {
@@ -76,7 +79,7 @@ public class DialogueManager : MonoBehaviour
 
             if (dialogueText.text == "i really shouldn't, but i'll let you through.\n")
             {
-                Debug.Log(dialogueText.text);
+                Destroy(door);
             }
 
         }
